@@ -2,12 +2,13 @@
 
 <br>
 
-## Índice
+# Índice
 
 - [Definicao do Problema](#problema)
 - [Dados](#dados)
 - [Etapas](#etapas)
 - [Progresso](#progresso)
+- [Proximos Passos](#passos)
 - [Criador](#criador)
 
 <br>
@@ -170,7 +171,7 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 > Considerando as duas métricas, o modelo de Regressão Logística apresentou o melhor resultado.
 
 ### Estratificação de Risco
-- Usaremos o melhor modelo treinado para estratificar a população em três grupos de risco:
+- Foi usado o melhor modelo treinado para estratificar a população em três grupos de risco:
   - Alto Risco (probabilidade de readmissão > 0,7)
   - Risco Médio (0,3 < Probabilidade de readmissão < 0,7)
   - Baixo Risco (probabilidade de readmissão < 0,3)
@@ -193,3 +194,9 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 - Experimentar outros modelos, como Naive Bayes e SVM.
 - Pode ser interessante fazer mais alguns experimentos com as variáveis e talvez mudar alguns dos critérios que adotamos na primeira parte.
 - Experimentar outro modelo com diferentes valores para sensibilidade e especificidade e avalie e compare a estratificação de risco.
+
+<br>
+
+# AUTOR
+
+Izablla Gomes de Sozua
