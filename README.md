@@ -170,6 +170,11 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 > Considerando as duas métricas, o modelo de Regressão Logística apresentou o melhor resultado.
 
 ### Estratificação de Risco
+- Usaremos o melhor modelo treinado para estratificar a população em três grupos de risco:
+  - Alto Risco (probabilidade de readmissão > 0,7)
+  - Risco Médio (0,3 < Probabilidade de readmissão < 0,7)
+  - Baixo Risco (probabilidade de readmissão < 0,3)
+
 - Foi usado o modelo **Regressão Logística**, pois apresentou as melhores métricas globais, Acurácia e Score AUC
 
 ![alt text](https://github.com/IzabellaSouza/Risk-Stratification-Using-Electronic-Patient-Records/blob/94679a26840df7973bb8fae6cd73505877784fae/imagens/estratificacaorisco.JPG)
@@ -178,15 +183,13 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 
 > As mesmas transformações que foram aplicadas em dados de teste e treino devem ser aplicadas aos novos dados. Isso pode ser feito no momento das previsões ou previamente no momento da coletas dos dados. 
 
+<br>
 
-# Observações e Próximos Passos:
+# PRÓXIMOS PASSOS
 
-Nossos modelos não alcançaram uma performance excelente e ainda há espaço para melhoria. Para o proximo ciclo:
+**Nossos modelos não alcançaram uma performance excelente e ainda há espaço para melhoria.** Para o príximo ciclo consideraremos:
 
-1- Trabalhar um pouco mais na otimização dos hiperparâmetros.
-
-2- Experimentar outros modelos, como Naive Bayes e SVM.
-
-3- Pode ser interessante fazer mais alguns experimentos com as variáveis e talvez mudar alguns dos critérios que adotamos na primeira parte.
-
-4- Experimentar outro modelo com diferentes valores para sensibilidade e especificidade e avalie e compare a estratificação de risco.
+- Trabalhar um pouco mais na otimização dos hiperparâmetros.
+- Experimentar outros modelos, como Naive Bayes e SVM.
+- Pode ser interessante fazer mais alguns experimentos com as variáveis e talvez mudar alguns dos critérios que adotamos na primeira parte.
+- Experimentar outro modelo com diferentes valores para sensibilidade e especificidade e avalie e compare a estratificação de risco.
