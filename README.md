@@ -11,6 +11,7 @@
 - [Criador](#criador)
 
 <br>
+
 # DEFINIÇÃO DO PROBLEMA
 
 As readmissões hospitalares são caras e refletem as inadequações no sistema de saúde. Nos Estados Unidos sozinho, o tratamento de pacientes diabéticos readmitidos excede 300 milhões de dólares por ano. Identificação precoce de pacientes que enfrentam um alto risco de readmissão pode permitir que os profissionais de saúde conduzam investigações adicionais e possivelmente impeçam futuras readmissões. Isso não apenas melhora a qualidade do atendimento, mas também reduz as despesas médicas em readmissão.
@@ -113,21 +114,50 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 - [x] Ferramentas Utilizadas
 <br>
 
-# PROCESSO 
+# PROGRESSO (Passo a Passo)
 
 ### Carregando os Dados e Compreendendo as Variáveis
-
+- Versões dos pacotes usados no jupyter notebook
+  - re         : 2.2.1
+  - numpy      : 1.19.5
+  - keras      : 2.6.0
+  - pandas     : 1.3.2
+  - sklearn    : 0.24.2
+  - seaborn    : 0.11.2
+  - imblearn   : 0.0
+  - tensorflow : 2.6.0
+  - matplotlib : 3.4.2
+  - statsmodels: 0.12.2
+ 
 ### Limpeza e Transformação dos Dados
 - Engenharia de Atributos
+  - Ajuste da Variável Alvo para Estratificação de Risco
 - Recategorização de Variável
 - Recoding variáveis categóricas
 
 ### Análise Exploratória
+- Insights
+  - A faixa etária de pacientes entre 70-80 é a que mais consome medicamentos.
+  - Pacientes do sexo feminino tem número maior de readmissões.
+  - A faixa etária de pacientes entre 70-80 é a que tem o maior número de readmissões.
+  - A faixa etária de pacientes entre 70-80 tem o maior percentual de readmissões, enquanto a faixa etária de 0-50 anos tem o menor percentual.
+  - Mulheres na faixa etária de 70-80 anos tem um número maior de readmissões por emergência.
+  - Mulheres Caucasianas são a maioria entre as mulheres readmitidas.
+  - Pacientes com comorbidade tem o maior número de visitas.
+  - Quanto mais visitas o paciente recebeu antes da alta, maior foi o volume de readmissões. Ou seja, quanto mais visitas o paciente recebe, maiores as chances de readmissão.
+
 - Análise Univariada
 - Pré-Processamento de Dados
-
+  - Divisão dos dados em treino e teste
+  - Padronização dos dados
+ 
 ### Modelagem Preditiva
 - Criação de cinco modelos
+  - AdaBoost
+  - DecisionTree
+  - DeepLearning
+  - RandomForest
+  - LogisticRegression
 - Treinamento dos modelos
 - Avaliação dos modelos
 - Cálculo e interpretação das métricas
@@ -135,7 +165,29 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 
 ### Comparação Entre os Modelos
 
+![alt text]()
+
+
+> Considerando as duas métricas, o modelo de Regressão Logística apresentou o melhor resultado.
+
 ### Estratificação de Risco
-- Usaremos o modelo que apresentou as melhores métricas globais, Acurácia e Score AUC
+- Foi usado o modelo **Regressão Logística**, pois apresentou as melhores métricas globais, Acurácia e Score AUC
+
+![alt text]()
 
 ### Previção do Risco de Readmissão com Novos Dados
+
+> As mesmas transformações que foram aplicadas em dados de teste e treino devem ser aplicadas aos novos dados. Isso pode ser feito no momento das previsões ou previamente no momento da coletas dos dados. 
+
+
+# Observações e Próximos Passos:
+
+Nossos modelos não alcançaram uma performance excelente e ainda há espaço para melhoria. Para o proximo ciclo:
+
+1- Trabalhar um pouco mais na otimização dos hiperparâmetros.
+
+2- Experimentar outros modelos, como Naive Bayes e SVM.
+
+3- Pode ser interessante fazer mais alguns experimentos com as variáveis e talvez mudar alguns dos critérios que adotamos na primeira parte.
+
+4- Experimentar outro modelo com diferentes valores para sensibilidade e especificidade e avalie e compare a estratificação de risco.
