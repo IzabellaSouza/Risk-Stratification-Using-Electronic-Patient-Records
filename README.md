@@ -1,6 +1,17 @@
 ![alt text](https://github.com/IzabellaSouza/Risk-Stratification-Using-Electronic-Patient-Records/blob/1e0c396d0a58fc7663052d5c68c0a91359730c3a/imagens/imagem01.png)
- 
-# Definição do Problema
+
+<br>
+
+## Índice
+
+- [Definicao do Problema](#problema)
+- [Dados](#dados)
+- [Etapas](#etapas)
+- [Progresso](#progresso)
+- [Criador](#criador)
+
+<br>
+# DEFINIÇÃO DO PROBLEMA
 
 As readmissões hospitalares são caras e refletem as inadequações no sistema de saúde. Nos Estados Unidos sozinho, o tratamento de pacientes diabéticos readmitidos excede 300 milhões de dólares por ano. Identificação precoce de pacientes que enfrentam um alto risco de readmissão pode permitir que os profissionais de saúde conduzam investigações adicionais e possivelmente impeçam futuras readmissões. Isso não apenas melhora a qualidade do atendimento, mas também reduz as despesas médicas em readmissão.
 
@@ -27,8 +38,9 @@ Observe que maior sensibilidade (recall) é mais desejável para os hospitais po
 Todas as escolhas serão justificadas durante o desenvolvimento do projeto.
 
 Os EUA mantém um programa constante de redução de readmissão de pacientes: **Hospital Readmissions Reduction Program (HRRP)**
- 
-# Dataset
+<br>
+
+# DADOS
 
 O conjunto de dados, **"Diabetes 130-US hospitals for years 1999-2008"**, foi baixado do UCI Machine Learning Repository.
 
@@ -51,31 +63,30 @@ Descrição completa do trabalho:
 Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records
 
 ## Dicionário de Dados:
-
-- 0 - **encounter_id** - identificador único de um encontro do pesquisador com o paciente.
-- 1 - **patient_nbr** - identificador exclusivo de um paciente.
-- 2 - **race** - valores: Caucasian, Asian, African American, Hispanic e other.
-- 3 - **gender** - valores: male, female, and unknown/invalid.
-- 4 - **age** - agrupados em intervalos de 10 anos: (0, 10), (10, 20), ..., (90, 100).
-- 5 - **weight** - peso em libras.
-- 6 - **admission_type_id** - identificador inteiro correspondente a 9 valores distintos, por exemplo, "emergência, urgência, eletiva, recém-nascido e não disponível".
-- 7 - **discharge_disposition_id** - identificador inteiro correspondente a 29 valores distintos, por exemplo, "enviado para casa, expirou e não está disponível".
-- 8 - **admission_source_id** - identificador inteiro correspondente a 21 valores distintos, por exemplo, "encaminhamento médico, e transferência de um hospital".
-- 9 - **time_in_hospital** - número inteiro de dias entre a admissão e a alta,
-- 10 - **payer_code** - identificador inteiro correspondente a 23 valores distintos, por exemplo, Blue Cross / Blue Shield, Medicare e auto-pagamento".
-- 11 - **medical_specialty** - identificador inteiro de uma especialidade do médico admitidor, correspondente a 84 valores distintos, por exemplo, cardiologia, medicina interna, família / clínica geral e cirurgião".
-- 12 - **num_lab_procedures** - número de testes de laboratório realizados durante a consulta.
-- 13 - **num_procedures** - número de procedimentos (exceto testes de laboratório) realizados durante a consulta.
-- 14 - **num_medications** - número de medicamentos genéricos distintos administrados durante a consulta.
-- 15 - **number_outpatient** - número de consultas ambulatoriais do paciente no ano anterior a consulta.
-- 16 - **number_emergency** - número de visitas de emergência do paciente no ano anterior a consulta.
-- 17 - **number_inpatient** - número de visitas hospitalares do paciente no ano anterior a consulta.
-- 18 - **diag_1** - diagnóstico primário (codificado como três primeiros dígitos da CID9); 848 valores distintos.
-- 19 - **diag_2** - diagnóstico secundário (codificado como três primeiros dígitos da CID9); 923 valores distintos.
-- 20 - **diag_3** - diagnóstico secundário adicional (codificado como três primeiros dígitos da CID9); 954 valores distintos.
-- 21 - **number_diagnoses** - número de diagnósticos inseridos no sistema.
-- 22 - **max_glu_serum** - teste sérico de glicose que indica a faixa do resultado ou se o teste não foi realizado. Valores: > 200, > 300, normal e nenhum, se não for medido.
-- 23 - **A1Cresult** - teste A1c que indica o intervalo do resultado ou se o teste não foi realizado. Valores: > 8 (se o resultado for maior que 8%), > 7 (se o resultado for maior que 7%, porém menor que 8%), normal (se o resultado for inferior a 7%) e nenhum, se não for medido.
+- 0 **encounter_id** - identificador único de um encontro do pesquisador com o paciente.
+- 1 **patient_nbr** - identificador exclusivo de um paciente.
+- 2 **race** - valores: Caucasian, Asian, African American, Hispanic e other.
+- 3 **gender** - valores: male, female, and unknown/invalid.
+- 4 **age** - agrupados em intervalos de 10 anos: (0, 10), (10, 20), ..., (90, 100).
+- 5 **weight** - peso em libras.
+- 6 **admission_type_id** - identificador inteiro correspondente a 9 valores distintos, por exemplo, "emergência, urgência, eletiva, recém-nascido e não disponível".
+- 7 **discharge_disposition_id** - identificador inteiro correspondente a 29 valores distintos, por exemplo, "enviado para casa, expirou e não está disponível".
+- 8 **admission_source_id** - identificador inteiro correspondente a 21 valores distintos, por exemplo, "encaminhamento médico, e transferência de um hospital".
+- 9 **time_in_hospital** - número inteiro de dias entre a admissão e a alta,
+- 10 **payer_code** - identificador inteiro correspondente a 23 valores distintos, por exemplo, Blue Cross / Blue Shield, Medicare e auto-pagamento".
+- 11 **medical_specialty** - identificador inteiro de uma especialidade do médico admitidor, correspondente a 84 valores distintos, por exemplo, cardiologia, medicina interna, família / clínica geral e cirurgião".
+- 12 **num_lab_procedures** - número de testes de laboratório realizados durante a consulta.
+- 13 **num_procedures** - número de procedimentos (exceto testes de laboratório) realizados durante a consulta.
+- 14 **num_medications** - número de medicamentos genéricos distintos administrados durante a consulta.
+- 15 **number_outpatient** - número de consultas ambulatoriais do paciente no ano anterior a consulta.
+- 16 **number_emergency** - número de visitas de emergência do paciente no ano anterior a consulta.
+- 17 **number_inpatient** - número de visitas hospitalares do paciente no ano anterior a consulta.
+- 18 **diag_1** - diagnóstico primário (codificado como três primeiros dígitos da CID9); 848 valores distintos.
+- 19 **diag_2** - diagnóstico secundário (codificado como três primeiros dígitos da CID9); 923 valores distintos.
+- 20 **diag_3** - diagnóstico secundário adicional (codificado como três primeiros dígitos da CID9); 954 valores distintos.
+- 21 **number_diagnoses** - número de diagnósticos inseridos no sistema.
+- 22 **max_glu_serum** - teste sérico de glicose que indica a faixa do resultado ou se o teste não foi realizado. Valores: > 200, > 300, normal e nenhum, se não for medido.
+- 23 **A1Cresult** - teste A1c que indica o intervalo do resultado ou se o teste não foi realizado. Valores: > 8 (se o resultado for maior que 8%), > 7 (se o resultado for maior que 7%, porém menor que 8%), normal (se o resultado for inferior a 7%) e nenhum, se não for medido.
 
 Na sequência temos os recursos de 24 a 46 para os nomes dos medicamentos genéricos:
 
@@ -83,27 +94,48 @@ Na sequência temos os recursos de 24 a 46 para os nomes dos medicamentos genér
 
 Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma alteração na dosagem. Valores: "up" se a dose foi aumentada durante a consulta.
 
-- 47 - **change** - indica se houve alteração nos medicamentos para diabéticos (dosagem ou nome genérico). Valores: "change" e "no change".
-- 48 - **diabetesMed** - indica se houve algum medicamento diabético prescrito. Valores: "sim" e "não".
-- 49 - **readmitted** - readmitido, "Dias para readmissão hospitalar. Valores: <30 (se o paciente foi readmitido em menos de 30 dias), > 30 (se o paciente foi readmitido em mais de 30 dias) e No, para nenhum registro de readmissão.
+- 47 **change** - indica se houve alteração nos medicamentos para diabéticos (dosagem ou nome genérico). Valores: "change" e "no change".
+- 48 **diabetesMed** - indica se houve algum medicamento diabético prescrito. Valores: "sim" e "não".
+- 49 **readmitted** - readmitido, "Dias para readmissão hospitalar. Valores: <30 (se o paciente foi readmitido em menos de 30 dias), > 30 (se o paciente foi readmitido em mais de 30 dias) e No, para nenhum registro de readmissão.
 
 **Nota: Códigos ICD-9 ou CID-9 (International Classification of Diseases ou Código Internacional de Doenças).**
+<br>
 
-- Carregando os Dados e Compreendendo as Variáveis
-- Limpeza e Transformação dos Dados
- - Engenharia de Atributos
- - Recategorização de Variável
- - Recoding variáveis categóricas
-- Análise Exploratória
-  - Análise Univariada
-  - Pré-Processamento de Dados
-- Modelagem Preditiva
-  - Criação de cinco modelos
-  - Treinamento dos modelos
-  - Avaliação dos modelos
-  - Cálculo e interpretação das métricas
-  - Extração da importância das variáveis
-- Comparação Entre os Modelos
-- Estratificação de Risco
-  - Usaremos o modelo que apresentou as melhores métricas globais, Acurácia e Score AUC
-- Previção do Risco de Readmissão com Novos Dados
+# ETAPAS
+- [x] Carregando os Dados e Compreendendo as Variáveis
+- [x] Limpeza e Transformação dos Dados
+- [x] Análise Exploratória
+- [x] Modelagem Preditiva
+- [x] Comparação Entre os Modelos
+- [x] Estratificação de Risco
+- [x] Previção do Risco de Readmissão com Novos Dados
+- [x] Conclusão
+- [x] Ferramentas Utilizadas
+<br>
+
+# PROCESSO 
+
+### Carregando os Dados e Compreendendo as Variáveis
+
+### Limpeza e Transformação dos Dados
+- Engenharia de Atributos
+- Recategorização de Variável
+- Recoding variáveis categóricas
+
+### Análise Exploratória
+- Análise Univariada
+- Pré-Processamento de Dados
+
+### Modelagem Preditiva
+- Criação de cinco modelos
+- Treinamento dos modelos
+- Avaliação dos modelos
+- Cálculo e interpretação das métricas
+- Extração da importância das variáveis
+
+### Comparação Entre os Modelos
+
+### Estratificação de Risco
+- Usaremos o modelo que apresentou as melhores métricas globais, Acurácia e Score AUC
+
+### Previção do Risco de Readmissão com Novos Dados
