@@ -122,6 +122,7 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
   - re         : 2.2.1
   - numpy      : 1.19.5
   - keras      : 2.6.0
+  - python     : 3.8.1
   - pandas     : 1.3.2
   - sklearn    : 0.24.2
   - seaborn    : 0.11.2
