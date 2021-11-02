@@ -187,7 +187,7 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 
 ### Conlusão e Próximos passos
 
-**Nossos modelos não alcançaram uma performance excelente e ainda há espaço para melhoria.** Para o príximo ciclo consideraremos:
+**Os modelos não alcançaram uma performance excelente e ainda há espaço para melhoria.** Para o príximo ciclo será considerado:
 
 - Trabalhar um pouco mais na otimização dos hiperparâmetros.
 - Experimentar outros modelos, como Naive Bayes e SVM.
