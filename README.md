@@ -8,7 +8,6 @@
 - [Dados](#dados)
 - [Etapas](#etapas)
 - [Progresso](#progresso)
-- [Proximos Passos](#passos)
 - [Criador](#criador)
 
 <br>
@@ -112,7 +111,6 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 - [x] Estratificação de Risco
 - [x] Previção do Risco de Readmissão com Novos Dados
 - [x] Conclusão
-- [x] Ferramentas Utilizadas
 <br>
 
 # PROGRESSO (Passo a Passo)
@@ -187,7 +185,7 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 
 <br>
 
-# PRÓXIMOS PASSOS
+### Conlusão e Próximos passos
 
 **Nossos modelos não alcançaram uma performance excelente e ainda há espaço para melhoria.** Para o príximo ciclo consideraremos:
 
