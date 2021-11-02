@@ -165,15 +165,14 @@ Cada um desses recursos indica se o medicamento foi prescrito ou se houve uma al
 
 ### Comparação Entre os Modelos
 
-![alt text]()
-
+![alt text](https://github.com/IzabellaSouza/Risk-Stratification-Using-Electronic-Patient-Records/blob/94679a26840df7973bb8fae6cd73505877784fae/imagens/modelostreinados.JPG)
 
 > Considerando as duas métricas, o modelo de Regressão Logística apresentou o melhor resultado.
 
 ### Estratificação de Risco
 - Foi usado o modelo **Regressão Logística**, pois apresentou as melhores métricas globais, Acurácia e Score AUC
 
-![alt text]()
+![alt text](https://github.com/IzabellaSouza/Risk-Stratification-Using-Electronic-Patient-Records/blob/94679a26840df7973bb8fae6cd73505877784fae/imagens/estratificacaorisco.JPG)
 
 ### Previção do Risco de Readmissão com Novos Dados
 
